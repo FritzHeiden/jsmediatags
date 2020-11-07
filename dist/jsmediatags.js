@@ -3079,6 +3079,8 @@ function () {
     key: "_findFileReader",
     value: function _findFileReader() {
       for (var i = 0; i < mediaFileReaders.length; i++) {
+        if (!mediaFileReaders[i] || !mediaFileReaders[i].canReadFile) continue;
+
         if (mediaFileReaders[i].canReadFile(this._file)) {
           return mediaFileReaders[i];
         }
