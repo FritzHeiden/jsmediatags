@@ -284,5 +284,6 @@ if (typeof process !== "undefined" && !process.browser) {
 module.exports = {
   "read": read,
   "Reader": Reader,
-  "Config": Config
+  "Config": Config,
+  "MediaFileReader": MediaFileReader
 };
